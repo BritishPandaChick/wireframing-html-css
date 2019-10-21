@@ -1,0 +1,104 @@
+/* 3 custom fonts(handwriting style) */
+@import url('http://fonts.googleapis.com/css?family=Delius|Walter+Turncoat|Permanent+Marker');
+/*fontawesome icon font*/
+@import url('http://thecodeplayer.com/uploads/fonts/font-awesome-4.1.0/css/font-awesome.min.css');
+
+/* basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply border images/style/color but not to width to:
+  1. elements with class attribute containing 'wb'
+  2. direct/1st level children of elements with class attr containing 'wb-child'
+ */
+ [class*='wb'], [class*='wb-child'] > * {
+   /* solid border color (fallback) */
+   border: 0px solid #aaa;
+   /* cloud image sliced at 2px from all sides as border-image */
+   border-image: url("http://thecodeplayer.com/u/m/clouds.png") 2 stretch;
+ }
+
+ /* border widths */
+ /* all sides */
+ .wb, .wb-child > * {
+   border-width: 2px;
+ }
+
+ /* single sides */
+ .wb-top, .wb-child-top > * {
+   border-top-width: 2px;
+ }
+
+ .wb-right, .wb-child-right > * {
+   border-right-width: 2px;
+ }
+
+ .wb-bottom, .wb-child-bottom > * {
+   border-bottom-width: 2px;
+ }
+
+ .wb-left, .wb-child-left > * {
+   border-left-width: 2px;
+ }
+
+ /* Preventing certain elements from using their default border/bg styles */
+ form, input, textarea, table, button, select, option {
+   font: inherit;
+   color: inherit;
+   background: transparent;
+ }
+
+ /* General Styles */
+ body {
+   font: bold 12px/18px Delius;
+   color: white;
+   background: #333;
+ }
+
+ a {
+   text-decoration: none;
+   color: white;
+   cursor: pointer; /* all links will be dummy */
+ }
+
+ .wrapper {
+   width: 320px;
+   margin: 50px auto;
+   border-bottom-width: 0;
+ }
+
+.black-bar {
+  padding: 2px 4px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.battery {
+  float: right;
+}
+
+.network {
+  float: left;
+}
+
+.time {
+  text-align: center;
+}
+
+.search-box {
+  padding: 5px;
+}
+
+.search-input, .search-button {
+  padding: 10px;
+  font-size: 14px;
+  float: left;
+}
+
+.search-input {
+  width: 70%;
+}
+
+.search-button {}
